@@ -298,30 +298,51 @@ section.testimonials-section {
 
 /* Contact Section Styles */
 section#contact {
-  text-align: left; /* Center the form */
+  text-align: center;
+  padding: 20px;
 }
 
 form#contactForm {
-  max-width: 400px; /* Set a maximum width for the form */
-  margin: 0 auto; /* Center the form horizontally */
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form#contactForm h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.form-row {
+  margin-bottom: 20px;
 }
 
 form#contactForm label {
-  display: block; /* Display labels on a new line */
-  margin-bottom: 5px; /* Add some space below each label */
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-align: left;
 }
 
 form#contactForm input,
 form#contactForm textarea {
-  width: 100%; /* Make form fields take up full width */
-  padding: 8px; /* Adjust padding as needed */
-  margin-bottom: 10px; /* Add space below each form field */
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+form#contactForm input:focus,
+form#contactForm textarea:focus {
+  border-color: #0984e3;
 }
 
 form#contactForm button {
   background-color: #0984e3;
   color: #fff;
-  padding: 0.5em 1em;
+  padding: 12px 24px;
   border: none;
   border-radius: 4px;
   cursor: pointer;

@@ -97,3 +97,4 @@ let currentPage = 1;
 const initialScreenWidth = window.innerWidth;
 const initialCardsPerPage = initialScreenWidth >= 1200 ? 3 : initialScreenWidth >= 768 ? 2 : 1;
 changePage(0);
+
