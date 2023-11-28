@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Luca Leyva- Portfolio</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-text">
+        <h1 id="header_H1">Luca Leyva</h1>
+        <p id="header_P">Agile Coach & Fullstack Developer</p>
+      </div>
+      <img src="./assets/images/me.jpg" alt="Luca Leyva" class="profile-image" />
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="about" class="about-section">
+      <h2>About Me</h2>
+      <p>
+        My mission is to be a catalyst for growth, transformation, and perseverance in both myself and others through
+        relationships and collaborative work. ⭐️
+      </p>
+      <p>I am passionate about leveraging web development to solve real human needs. 💻</p>
+      <p>
+        I have managed, lead, coached, and taught in some capacity as a professional for almost two decades, and have
+        been working with technology just as long!
+      </p>
+      <p>
+        Two things in life fill me with joy and fulfillment - seeing someone grow into the best version of themselves,
+        and solving a problem creatively using a technological solution. 🤟
+      </p>
+      <p>
+        If someone were to describe my greatest strengths, they would be connecting with others, listening, and asking
+        questions, as well as finding creative, novel approaches to problem-solving.
+      </p>
+
+      <p>
+        My professional journey has taken me through a diverse set of fields: retail, service industry, construction,
+        the United States Air Force (where I served for nearly 9 years and deployed in support of Operation Iraqi
+        Freedom multiple times), management, and coaching.
+      </p>
+    </section>
+
+    <section id="expertise">
+      <h2>Expertise</h2>
+      <div class="expertise-container" id="expertiseContainer"></div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <p>Your experience details go here.</p>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+      <h2>Testimonials</h2>
+
+      <div class="testimonial-container" id="testimonialContainer"></div>
+
+      <div class="pagination">
+        <button class="prev" onclick="changePage(-1)">❮ Prev</button>
+        <span id="currentPage">1</span>
+        <button class="next" onclick="changePage(1)">Next ❯</button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="button" onclick="sendEmail()">Send Message</button>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
