@@ -1,11 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const menuIcon = document.querySelector('.menu-icon');
-  const navUl = document.querySelector('nav ul');
-
-  menuIcon.addEventListener('click', function () {
-    navUl.classList.toggle('show');
-  });
-
+document.addEventListener('DOMContentLoaded', async function () {
   // Function to toggle the menu
   function toggleMenu() {
     const navList = document.querySelector('nav ul');
@@ -94,6 +87,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const screenWidth = window.innerWidth;
     const cardsPerPage = screenWidth >= 1200 ? 3 : screenWidth >= 768 ? 2 : 1;
 
+    let currentPage = parseInt(document.getElementById("currentPage").textContent);
+
     currentPage += change;
 
     if (currentPage < 1) {
@@ -108,7 +103,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Initial display
   let currentPage = 1;
+  const initialTestimonials = await getTestimonials();
   const initialScreenWidth = window.innerWidth;
   const initialCardsPerPage = initialScreenWidth >= 1200 ? 3 : initialScreenWidth >= 768 ? 2 : 1;
-  changePage(0);
+  displayTestimonials(initialTestimonials, 0, initialCardsPerPage);
+
+  // Pagination event listeners
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+
+  prevButton.addEventListener('click', function () {
+    changePage(-1);
+  });
+
+  nextButton.addEventListener('click', function () {
+    changePage(1);
+  });
+
+  // Toggle menu event listener
+  const menuIcon = document.querySelector('.menu-icon');
+  const navUl = document.querySelector('nav ul');
+
+  menuIcon.addEventListener('click', function () {
+    navUl.classList.toggle('show');
+  });
 });
