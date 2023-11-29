@@ -3,8 +3,8 @@ function displayExpertiseItems() {
   const container = document.getElementById("expertiseContainer");
 
   const expertiseItems = [
-    { name: "Systems Thinking", color: "#3498db" },
-    { name: "Strategic Planning", color: "#e74c3c" },
+    { name: "Planning & Execution", color: "#3498db" },
+    { name: "Agile Processes & Technical Practices", color: "#e74c3c" },
     { name: "Collaboration", color: "#27ae60" },
     // Add more expertise items as needed
   ];
@@ -97,4 +97,3 @@ let currentPage = 1;
 const initialScreenWidth = window.innerWidth;
 const initialCardsPerPage = initialScreenWidth >= 1200 ? 3 : initialScreenWidth >= 768 ? 2 : 1;
 changePage(0);
-

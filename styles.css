@@ -146,7 +146,7 @@ section.about-section {
 }
 
 /* Testimonials Section Styles */
-section.testimonials-section {
+.testimonials-section {
   padding: 2em;
   background-color: #fff;
   border-radius: 8px;
@@ -156,22 +156,32 @@ section.testimonials-section {
 
 .testimonial-container {
   display: flex;
-  justify-content: center; /* Center the card on smaller screens */
-  align-items: center; /* Align vertically on smaller screens */
-  overflow-x: hidden; /* Hide horizontal overflow */
-  flex-wrap: wrap; /* Ensure cards wrap to the next line */
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .testimonial-card {
-  width: 90%; /* Adjust the width as needed */
-  max-width: 400px; /* Set a max-width if necessary */
+  width: calc(33.33% - 20px); /* 3 cards per row by default */
+  max-width: 400px;
   margin: 10px;
   padding: 10px;
-  box-sizing: border-box; /* Include padding and border in the width */
+  box-sizing: border-box;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   transition: transform 0.3s ease-in-out;
   text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .testimonial-card {
+    width: calc(50% - 20px); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    width: calc(100% - 20px); /* 1 card per row on small screens */
+  }
 }
 
 .testimonial-card:hover {
@@ -179,11 +189,11 @@ section.testimonials-section {
 }
 
 .testimonial-image {
-  width: 100px; /* Adjust the width as needed */
-  height: 100px; /* Adjust the height as needed */
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 50%;
-  margin: 0 auto 10px; /* Center the image above the text */
+  margin: 0 auto 10px;
 }
 
 .testimonial-content {
@@ -206,8 +216,8 @@ section.testimonials-section {
 
 .pagination {
   display: flex;
-  justify-content: center; /* Center the buttons on smaller screens */
-  align-items: center; /* Align vertically on smaller screens */
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
 }
 
