@@ -188,7 +188,6 @@ section.about-section {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
 }
 
 .expertise-container {
@@ -202,27 +201,26 @@ section.about-section {
   text-align: center;
   padding: 15px;
   border-radius: 8px;
-  background-color: #3498db;
   color: #fff;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   width: calc(25% - 20px); /* Adjust the percentage based on your design */
-  margin-bottom: 20px; /* Adjust the spacing between items */
+  margin-bottom: 25px; /* Adjust the spacing between items */
 }
 
 /* Systems Thinking */
 .expertise-item.systems-thinking {
-  background-color: #3498db;
+  background-color: #48dbfb;
 }
 
 /* Strategic Planning */
 .expertise-item.strategic-planning {
-  background-color: #e74c3c;
+  background-color: #ff6b6b;
 }
 
 /* Collaboration */
 .expertise-item.collaboration {
-  background-color: #27ae60;
+  background-color: #1dd1a1;
 }
 
 /* Media query for smaller screens */
