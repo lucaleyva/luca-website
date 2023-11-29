@@ -1,3 +1,7 @@
+// Prevent menu from covering sections
+const navigationHeight = document.querySelector('.navbar-container').offsetHeight;
+document.documentElement.style.setProperty('--scroll-padding', navigationHeight - 1 + "px");
+
 document.addEventListener('DOMContentLoaded', async function () {
   // Function to toggle the menu
   function toggleMenu() {
@@ -142,5 +146,25 @@ document.addEventListener('DOMContentLoaded', async function () {
         navUl.classList.remove('show');
       }, 300);
     });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the button
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  };
+
+  // When the button is clicked, scroll to the top of the document
+  scrollToTopBtn.addEventListener("click", function () {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
   });
 });

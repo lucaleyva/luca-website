@@ -25,6 +25,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 75px);
 }
 
 /* Header Styles */
@@ -148,6 +149,18 @@ nav a {
   section:not(:first-child) {
     padding-top: 80px; /* Adjust the value based on your design */
   }
+
+  nav li {
+    margin-bottom: 10px; /* Adjust the margin to add space between options */
+  }
+ 
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+    padding: 10px; /* Adjust the padding for each option */
+    display: block; /* Ensure each option takes full width */
+  }
 }
 
 nav a:hover {
@@ -160,7 +173,7 @@ section {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 /* About Me Section Styles */
@@ -179,11 +192,10 @@ section.about-section {
 }
 
 .expertise-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  grid-gap: 15px;
-  justify-content: center;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .expertise-item {
@@ -194,7 +206,8 @@ section.about-section {
   color: #fff;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-  width: 100%;
+  width: calc(25% - 20px); /* Adjust the percentage based on your design */
+  margin-bottom: 20px; /* Adjust the spacing between items */
 }
 
 /* Systems Thinking */
@@ -212,6 +225,14 @@ section.about-section {
   background-color: #27ae60;
 }
 
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .expertise-item {
+    width: calc(100% - 20px); /* Full width for stacked items with margin */
+    margin-bottom: 5px; /* Add space between stacked items */
+  }
+}
+
 /* Hover Effect */
 .expertise-item:hover {
   transform: scale(1.05);
@@ -223,7 +244,6 @@ section.about-section {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
 }
 
 .testimonial-container {
@@ -311,10 +331,29 @@ section.about-section {
 /* Contact Section Styles */
 section#contact {
   text-align: center;
-  padding: 20px;
 }
 
 form#contactForm {
   max-width: 400px;
   margin: 0 auto;
 }
+
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 5px; /* Adjusted to leave 10px space from the bottom */
+  right: 20px;
+  background-color: #0984e3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #2d3436;
+}
+
