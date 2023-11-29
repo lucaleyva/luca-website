@@ -3,10 +3,11 @@ body {
   font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
-  width: 12px; /* Set the width of the scrollbar */
+  width: 12px; 
 }
 
 body::-webkit-scrollbar-track {
@@ -19,7 +20,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background-color: #bb0f0f; /* Set the color of the scrollbar thumb */ /* Set the color of the scrollbar thumb on hover */
+  background-color: #e448486d; /* Set the color of the scrollbar thumb */ /* Set the color of the scrollbar thumb on hover */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Header Styles */
