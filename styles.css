@@ -36,11 +36,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column; /* Default layout for smaller screens */
 }
 
 .header-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Default layout for smaller screens */
   align-items: center;
   margin-right: 20px;
 }
@@ -61,6 +62,23 @@ header {
   border-radius: 50%;
   margin-top: 10px;
   margin-left: 20px;
+}
+
+/* Larger screens layout */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+  }
+
+  .header-content {
+    flex-direction: row;
+  }
+
+  .profile-image {
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 /* Navigation Styles */
