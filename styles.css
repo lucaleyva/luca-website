@@ -257,7 +257,6 @@ form#contactForm h2 {
 }
 
 form#contactForm label {
-  display: block;
   margin-bottom: 8px;
   font-weight: bold;
   text-align: left;
@@ -267,13 +266,11 @@ form#contactForm input,
 form#contactForm textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   transition: border-color 0.3s ease;
 }
-
 form#contactForm input:focus,
 form#contactForm textarea:focus {
   border-color: #0984e3;
