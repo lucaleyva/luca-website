@@ -10,25 +10,34 @@
 
   <body>
     <header>
-      <div class="header-text">
-        <h1 id="header_H1">Luca Leyva</h1>
-        <p id="header_P">Agile & Leadership Coach</p>
-        <p id="header_P">Full Stack Developer</p>
-        <p id="header_P">Extreme Programming (XP) Practicioner</p>
+      <div class="header-content">
+        <div class="header-text">
+          <h1 id="header_H1">Luca Leyva</h1>
+          <p class="header_P">Agile & Leadership Coach</p>
+          <p class="header_P">Full Stack Developer</p>
+          <p class="header_P">Extreme Programming (XP) Practitioner</p>
+        </div>
+        <img src="./assets/images/me.jpg" alt="Luca Leyva" class="profile-image" />
       </div>
-      <img src="./assets/images/me.jpg" alt="Luca Leyva" class="profile-image" />
     </header>
 
     <nav>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#expertise">Expertise</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <div class="navbar-container">
+        <ul class="navbar-list">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
     </nav>
-
+    
     <section id="about" class="about-section">
       <h2>About Me</h2>
       <h2>Welcome to a space where growth, transformation, and resilience thrive. <span style="font-size: 1.5em;">⭐️</span></h2>
