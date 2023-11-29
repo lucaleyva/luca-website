@@ -5,6 +5,12 @@ document.addEventListener('DOMContentLoaded', async function () {
     navList.classList.toggle('active');
   }
 
+  // Function to close the menu
+  function closeMenu() {
+    const navList = document.querySelector('nav ul');
+    navList.classList.remove('active');
+  }
+
   // Function to display expertise items
   function displayExpertiseItems() {
     const container = document.getElementById("expertiseContainer");
@@ -126,5 +132,15 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   menuIcon.addEventListener('click', function () {
     navUl.classList.toggle('show');
+  });
+
+  // Event listener to close menu on section click
+  document.querySelectorAll('nav a').forEach((link) => {
+    link.addEventListener('click', () => {
+      // Close the menu after a short delay
+      setTimeout(() => {
+        navUl.classList.remove('show');
+      }, 300);
+    });
   });
 });

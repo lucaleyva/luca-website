@@ -116,6 +116,7 @@ nav a {
     left: 0;
     background-color: #0984e3;
     z-index: 99;
+    padding-top: 20px; /* Add padding to sit above the targeted section */
   }
 
   nav ul.show {
@@ -124,6 +125,10 @@ nav a {
 
   .menu-icon {
     display: flex;
+  }
+
+  section:not(:first-child) {
+    padding-top: 80px; /* Adjust the value based on your design */
   }
 }
 
