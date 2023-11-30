@@ -33,52 +33,44 @@ header {
   background-color: #74b9ff;
   color: #fff;
   text-align: center;
-  padding: 1em 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; /* Default layout for smaller screens */
+  padding: 1em;
 }
 
 .header-content {
   display: flex;
-  flex-direction: column; /* Default layout for smaller screens */
+  flex-direction: column; /* Stack items vertically on small screens */
   align-items: center;
-  margin-right: 20px;
 }
 
 .header-text {
   text-align: center;
-  margin-bottom: 50px; /* Add space between header-text and profile-image */
-  padding-right: 25px;
+  margin-bottom: 20px;
 }
 
 .header_H1 {
   margin: 0;
-  font-size: 2em; /* Adjust the font size to your preference */
-  font-weight: bold; /* Add boldness for energy */
-  color: #fff; /* Adjust the color as needed */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Enhance the text shadow */
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .header_P {
   margin: 0;
-  font-size: 1.5em; /* Adjust the font size for paragraphs */
-  color: #fff; /* Adjust the color as needed */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Enhance the text shadow */
+  font-size: 1.2em;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Additional styling for profile image */
 .profile-image {
   width: 200px;
   height: 200px;
-  border-radius: 12px; /* Rounded edges */
+  border-radius: 12px;
   margin-top: 10px;
-  margin-left: 20px;
+  margin-bottom: 20px; /* Add space between header-text and profile-image */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* Add a box shadow for depth */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  object-fit: cover; /* Maintain aspect ratio */
+  object-fit: cover;
 }
 
 /* Hover effect for a slight growth */
@@ -87,21 +79,19 @@ header {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-
 /* Larger screens layout */
 @media (min-width: 768px) {
-  header {
-    flex-direction: row;
-  }
-
   .header-content {
-    flex-direction: row;
+    flex-direction: row; /* Align items horizontally on larger screens */
+    justify-content: center;
+    align-items: center;
   }
 
   .profile-image {
     margin-top: 0;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 0; /* Remove the margin-bottom for alignment */
   }
 }
 
@@ -445,4 +435,3 @@ form#contactForm button[type="submit"]:hover {
   background-color: #636e72;
   color: white;
 }
-
