@@ -49,6 +49,8 @@ header {
 
 .header-text {
   text-align: center;
+  margin-bottom: 50px; /* Add space between header-text and profile-image */
+  padding-right: 25px;
 }
 
 .header_H1,
@@ -60,10 +62,22 @@ header {
 .profile-image {
   width: 200px;
   height: 200px;
-  border-radius: 50%;
+  border-radius: 12px; /* Rounded edges */
   margin-top: 10px;
-  margin-left: 20px;
+  margin-left: 70px;
+  margin-bottom: 50px; /* Add space between header-text and profile-image */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Add a box shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover; /* Maintain aspect ratio */
 }
+
+/* Hover effect for a slight growth */
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 
 /* Larger screens layout */
 @media (min-width: 768px) {
