@@ -172,7 +172,6 @@ nav a:hover {
   color: #2d3436;
 }
 
-
 /* Section Styles */
 section {
   padding: 2em;
@@ -244,7 +243,7 @@ section.about-section {
 }
 
 .section-title {
-  color: #e17055; /* Energetic orange color */
+  color: #f39c12; /* Energetic orange color */
   font-size: 2em; /* Larger font size for emphasis */
   margin-bottom: 1em; /* Add some space between title and text */
 }
@@ -360,50 +359,67 @@ section.about-section {
 
 /* Contact Section Styles */
 section#contact {
-  text-align: center;
+  text-align: left;
 }
 
 form#contactForm {
-  max-width: 400px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
 }
 
 form#contactForm label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-form#contactForm input, form#contactForm textarea {
-  display: block;
+form#contactForm input[type="text"],
+form#contactForm input[type="email"],
+form#contactForm textarea {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   box-sizing: border-box;
-  border-radius: 5px;
-  border: none;
-  background-color: #f5f5f5;
-  font-size: 1.1rem;
-  font-family: Arial, sans-serif;
+  resize: vertical;
 }
 
-form#contactForm input[type="submit"] {
-  background-color: #4CAF50;
+form#contactForm button[type="submit"] {
+  background-color: #04AA6D;
   color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
 }
 
-form#contactForm input[type="submit"]:hover {
-  background-color: #3e8e41;
+form#contactForm button[type="submit"]:hover {
+  background-color: #00b894;
 }
 
-form#contactForm input[type="submit"]:active {
-  background-color: #3e8e41;
-  transform: translateY(1px);
+/* Scroll to Top Button Styles */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #6c5ce7;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid #2d3436;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 #scrollToTopBtn:hover {
-  background-color: #2d3436;
+  background-color: #636e72;
+  color: white;
 }
+
