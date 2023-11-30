@@ -102,6 +102,9 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
+  justify-content: space-evenly; /* Distribute items evenly */
+  align-items: center;
+  width: 100%; /* Take full width */
 }
 
 nav a {
@@ -109,6 +112,7 @@ nav a {
   color: #fff;
   padding: 1em;
   transition: color 0.3s ease;
+  font-weight: bold; /* Make the text bolder */
 }
 
 .menu-icon {
@@ -160,12 +164,14 @@ nav a {
     transition: color 0.3s ease;
     padding: 10px; /* Adjust the padding for each option */
     display: block; /* Ensure each option takes full width */
+    font-weight: bold; /* Make the text bolder */
   }
 }
 
 nav a:hover {
   color: #2d3436;
 }
+
 
 /* Section Styles */
 section {
@@ -183,7 +189,7 @@ section.about-section {
 
 /* Expertise Section Styles */
 #expertise {
-  text-align: center;
+  text-align: left;
   padding: 2em;
   background-color: #fff;
   border-radius: 8px;
@@ -206,6 +212,12 @@ section.about-section {
   transition: transform 0.3s ease-in-out;
   width: calc(25% - 20px); /* Adjust the percentage based on your design */
   margin-bottom: 25px; /* Adjust the spacing between items */
+  font-size: 1.25em; /* 25% larger than the original size */
+  font-weight: bold;
+  height: 100px; /* Set a fixed height for consistency */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Systems Thinking */
@@ -221,6 +233,26 @@ section.about-section {
 /* Collaboration */
 .expertise-item.collaboration {
   background-color: #1dd1a1;
+}
+
+/* Add this to your existing styles or create a new style block */
+.energetic-services-section {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  color: #e17055; /* Energetic orange color */
+  font-size: 2em; /* Larger font size for emphasis */
+  margin-bottom: 1em; /* Add some space between title and text */
+}
+
+.energetic-text {
+  color: #2d3436; /* Dark text color */
+  font-size: 1.2em; /* Slightly larger text size */
+  line-height: 1.6; /* Improved readability with increased line height */
 }
 
 /* Media query for smaller screens */
