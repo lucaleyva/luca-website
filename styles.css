@@ -53,19 +53,28 @@ header {
   padding-right: 25px;
 }
 
-.header_H1,
-.header_P {
+.header_H1 {
   margin: 0;
-  text-shadow: 2% 2% 4% rgba(0, 0, 0, 0.3);
+  font-size: 2em; /* Adjust the font size to your preference */
+  font-weight: bold; /* Add boldness for energy */
+  color: #fff; /* Adjust the color as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Enhance the text shadow */
 }
 
+.header_P {
+  margin: 0;
+  font-size: 1.5em; /* Adjust the font size for paragraphs */
+  color: #fff; /* Adjust the color as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Enhance the text shadow */
+}
+
+/* Additional styling for profile image */
 .profile-image {
   width: 200px;
   height: 200px;
   border-radius: 12px; /* Rounded edges */
   margin-top: 10px;
-  margin-left: 70px;
-  margin-bottom: 50px; /* Add space between header-text and profile-image */
+  margin-left: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   /* Add a box shadow for depth */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
